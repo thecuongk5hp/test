@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let numbers=[5,7,9,11,45];
+        // //kiểm tra xem trong mảng này các phần tử có phải lớn  hơn 5 ko
+        // let result=    numbers.every((a,b,c)=>{
+        //     return item>5
+        // })
+        // console.log("result",result);
+
+        let students=[
+            {
+                name:"mai",
+                gender:"male",
+                add:"hn",
+            },
+            {
+                name:"nam",
+                gender:"female",
+                add:"hn",
+            },
+            {
+                name:"ngọc",
+                gender:"female",
+                add:"hn",
+            },
+        ]
+        //tất cả các phần tử student có phải là nam không
+        //tất cả có phải ở hà nội không
+        let check1 =students.every(item => item.name === "nam");
+        console.log(check1);
+        let check2 =students.every(item => item.add === "hn");
+        console.log(check2);
+
+    </script>
+</body>
+</html>

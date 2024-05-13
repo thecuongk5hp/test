@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        reduce: tính toán
+        thường thì for thường code dài hơn
+        */
+       let numbers=[5,7,9,11];
+       //tính tổng tất cả các phần tử trong mảng numbers
+       //dùng for thường tính tônrg tất cả các phần tử trong mảng numbers
+        // let sum = 0; // giá trị khởi tạo
+        // for (let i = 0; i < numbers.length; i++) {
+        //     sum =sum+ numbers[i]; // gán giá trị
+        // };
+        //     console.log(sum);
+        
+        let total1 = numbers.reduce((accumulator, item,arr)=>{
+            return accumulator + item
+        },0)//giá trị khởi tạo,0
+        console.log(total1);
+
+        let total2 = numbers.reduce((accumulator, item,arr)=>{
+            return accumulator + item
+        })
+        console.log(total2);
+
+        let products=[
+            {
+                name:"iphone5",
+                quantity:5,
+                price:2000,
+            },
+            {
+                name:"iphone12",
+                quantity:6,
+                price:5000,
+            },
+            {
+                name:"iphone15",
+                quantity:8,
+                price:8000,
+            },
+        ]
+        let tongTien=products.reduce((acc,item,arr)=>{
+            return acc+ item.quantity * item.price
+        },0)
+        console.log(tongTien);
+    </script>
+</body>
+</html>

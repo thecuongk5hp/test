@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            destructoring:sự phá vỡ cấu trúc
+            1.với array
+            2.với object
+        */
+       //với array
+       let students=["minh thu","hồng vân","thùy linh"];
+       let [a,b,c]=students;
+       console.log("a",a);
+
+       //với obj tên bắt buộc phải obj
+       let obj={
+        name:"hoa",
+        address:"hn",
+       }
+       let {name} =obj;
+       console.log(name);
+       let {address} =obj;
+       console.log(address);
+    </script>
+</body>
+</html>

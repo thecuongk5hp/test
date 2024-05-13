@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            forEach
+                1.dùng để duyẹt các phần tử trong mảng
+                2.không tạo ra mảng mới
+                3.không nhận return
+                4.tương tác trực tiếp với các phần tử trong mảng
+                => khi làm việc với các phương thức thì phải quan tâm
+                đầu vào là gì
+                đầu ra kết quả là gì
+            cú pháp tổng quát
+            arrayName.for Each(function()item,index,array(
+
+            ))
+            arrayName.forEach(()=>{
+
+            })
+            ()=>{
+
+            }
+            item các phần tử trong mảng
+            index: vị trí của phần tử đó
+            array: là mảng ban đầu
+        */
+        let numbers=[5,6,8,11];
+    let result =  numbers.forEach((item1,index,array)=>{
+        console.log("item",item1);
+        console.log("index",index);
+        return 100
+       })
+       console.log(result);
+       
+       // nhân đôi chỉ số trong mảng
+       numbers.forEach((item, index, array) => {
+            array[index] = item * 2;
+        });
+        console.log(numbers);
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkEndString(la, b) {
+            return la.endsWith(b);
+        }
+
+        let text1 = " Hello, Word!";
+        let check1 = checkEndString(text1, "Hello");
+        console.log(check1);
+
+        let text2 = "Hi there!";
+        let check2 = checkEndString(text2, "there!");
+        console.log(check2);
+    </script>
+</body>
+</html>

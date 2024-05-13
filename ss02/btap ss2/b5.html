@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let employees = [
+            {
+                name: "Nguyễn Thế Cường",
+                age: 18,
+            },
+            {
+                name: "Nguyễn Ngọc Hà",
+                age: 19,
+            },
+            {
+                name: "Nguyễn Kim Anh",
+                age: 9,
+            },
+        ];
+        let increase = employees.sort((a,b)=>{
+            return a.age-b.age
+        });
+        console.log(increase);
+
+        let decrease = employees.sort((a,b)=>{
+            return b.age-a.age
+        });
+        console.log(decrease);
+    </script>
+</body>
+</html>

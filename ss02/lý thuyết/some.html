@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let account =[
+            {
+                name:"minh",
+                password:"123456",
+                address:"hà nội",
+            },
+            {
+                name:"minh",
+                password:"123555",
+                address:"ninh bình",
+            },
+            {
+                name:"minh",
+                password:"123555",
+                address:"hcm",
+            },
+        ]
+        // kiểm tra xem trong mảng acc này có đối tượng ở ninh bình không
+        let result=account.some((item,index,arr)=>{
+            return item.address == "ninh bình"
+        });
+        if(result){
+            console.log("có giá trị thỏa mãn");
+        }else{
+            console.log("không có giá trị thỏa mãn");
+        }
+    </script>
+</body>
+</html>

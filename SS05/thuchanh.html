@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Word</title>
+</head>
+<body>
+    <h1>The Word Is :</h1>
+    <input type="text" id="answer" />
+    Remaining guess: <span id="remaining-guess">5</span>
+    <br>
+    <button onclick="checkAnswer()">Guess</button>
+    <script>
+        let arr = ["hoa", "hao", "han", "nam", "anh", "tan", "thu", "tai", "tho"];
+        let check = arr[Math.floor(Math.random() * arr.length)];
+        let guessesLeft = 5;
+        function checkAnswer() {
+            let input = document.getElementById("answer");
+            let a = input.value.trim();
+            if (a === "") {
+                alert("Vui lòng nhập từ đoán.");
+                return;
+            }
+            if (a === check) {
+                alert("Chúc mừng bạn ^.^");
+            } else {
+                alert("Bạn đoán sai rồi");
+                if (guessesLeft > 0) {
+                    guessesLeft--;
+                    document.getElementById("remaining-guess").innerText = guessesLeft;
+                    if (guessesLeft === 0) {
+                        alert("Bạn đã hết lượt đoán :/");
+                    }
+                }
+            }
+            input.value = "";
+        };
+    </script>
+</body>
+</html>
